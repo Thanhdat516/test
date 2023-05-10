@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --border: #201d20;
+    --white: rgba(255, 255, 255, 0.8);
+    --black: rgba(0, 0, 0, 0.8)
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f0ecf5, #c4c0ce);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f2eff8, #cdc8d8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* position: relative; */
+}
+
+/* #container {
+    display: none;
+} */
+
+/* Container-header css*/
+.container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #353531;
+    gap: 30px; 
+    padding-top: 20px;
+}
+
+.title {
+    font-size: 30px;
+    padding: 8px;
+    border: 5px solid var(--boder);    
+}
+
+.info {
+    cursor: pointer;
+}
+
+.random-number {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.list-option {
+    font-size: 30px;
+}
+
+.option {
+    cursor: pointer;
+}
+
+/* Container-body css */
+.container-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 50px;
+    margin-top: 20px;
+    margin-right: 250px;
+    margin-left: 100px;
+}
+
+.container-number {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    flex-grow: 0.5;
+    /* width: 300px; */
+    /* height: auto; */
+    border: 2px solid var(--border);
+    padding: 20px;
+    align-self: center;
+}
+
+.container-number > div {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.container-number > div:hover {
+    cursor: pointer;
+    background-color: #909083;
+}
+
+.container-guess-number {
+    flex-grow: 2.5;
+    /* width: 300px; */
+    border: 2px solid var(--border);
+    max-width: 802px;
+}
+
+/* Css Box */
+.group-box {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 40%;
+    justify-content: start;
+    
+}
+
+.box {
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    margin: 10px 0px 10px 20px;
+    padding: 8px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    min-height: 54.4px;
+}
+
+.box.green {
+    background-color: rgb(23, 166, 23);
+}
+
+.box.yellow {
+    background-color: rgb(150, 150, 18);
+}
+
+.box-result-gr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box-amount-true {
+    margin-left: 62px;
+    width: 64px;
+}
+
+.box-position-true {
+    margin-right: 4px;
+    width: 64px;
+}
+
+/* Css suggest box */
+.title-colume-true {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.your-turn {
+    margin-left: 10px;
+}
+
+.amount-true {
+    margin-right: -300px;
+}
+
+.position-true {
+    margin-right: 10px;
+}
+
+/* Rules Game */
+#container-info {
+    position: absolute;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#container-info.open {
+    display: flex;
+}
+
+.info-game {
+    border: 1px solid var(--black);
+    border-radius: 10px;
+    background-color: white;
+    width: 700px;
+    height: auto;
+    padding: 20px;
+    animation: FadeIn linear .5s;
+}
+
+.icon-xmark > i {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.content-info {
+    padding: 10px;
+}
+
+.note {
+    font-weight: bold;
+}
+
+/* hover btn, select */
+.btn:hover {
+    opacity: 0.5;
+}
+
+/* custom title */
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title]:after {
+    font-family: Arial, Helvetica, sans-serif;
+    content: attr(data-title);
+    color: #111;
+    font-weight: 700;
+    font-size: 16px;
+    bottom: -1.6em;
+    position: absolute;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    z-index: 99999;
+    visibility: hidden;
+    padding: 1px 5px 2px 5px;
+    background-image: -webkit-linear-gradient(
+                                top, #f8f8f8, #cccccc); 
+                                  
+    background-image: -moz-linear-gradient(
+                        top, #f8f8f8, #cccccc);  
+                            
+    background-image: -ms-linear-gradient(
+                        top, #f8f8f8, #cccccc); 
+                            
+    background-image: -o-linear-gradient(
+                        top, #f8f8f8, #cccccc);
+}
+[data-title] {
+    position: relative;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 900px) {
+    .container-body {
+        flex-direction: column;
+    }
+    .container-number {
+        grid-auto-flow: column;
+    }
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <title>Guess Number</title>
+</head>
+<body>
+    <div id="container">
+        <div class="container-header">
+            <div class="title">
+                Guess Number
+                <i class="btn info fa-solid fa-circle-question" data-title="Luật chơi"></i>
+            </div>
+            <div class="random-number">
+                <i class="btn fa-solid fa-rotate" data-title="Làm mới"></i>
+            </div>
+            <div class="list-option">
+                <i class="btn option fa-solid fa-list-ul" data-title="Tùy chọn"></i>
+            </div>
+        </div>
+        <div class="container-body">
+            <div class="container-number">
+                <div class="number">1</div>
+                <div class="number">2</div>
+                <div class="number">3</div>
+                <div class="number">4</div>
+                <div class="number">5</div>
+                <div class="number">6</div>
+                <div class="number">7</div>
+                <div class="number">8</div>
+                <div class="number">9</div>
+                <div class="Delete"><i class="fa-solid fa-delete-left"></i></div>
+                <div class="number">0</div>
+                <div class="Enter">Enter</div>
+            </div>
+            <div class="container-guess-number">
+                <div class="title-colume-true">
+                    <div class="your-turn">Lượt của bạn còn <span class="in-turn">10</span></div>
+                    <div class="amount-true">Số lượng đúng</div>
+                    <div class="position-true">Vị trí đúng</div>
+                </div>
+                <div class="group-box group-box-1">
+                    <div class="box boxitem-gr box-0"></div>
+                    <div class="box boxitem-gr box-1"></div>
+                    <div class="box boxitem-gr box-2"></div>
+                    <div class="box boxitem-gr box-3"></div>
+                    <div class="box-result-gr box-result-1">
+                        <div class="box box-amount-true amount-true-1"></div>
+                        <div class="box box-position-true position-true-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="container-info">
+        <div class="info-game">
+            <div class="btn icon-xmark">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="content-info">
+                <h3>Luật chơi</h3></br>
+                Bạn có 10 lần đoán. Nhấn nút Enter để gửi đáp án. </br></br>
+                Sau mỗi lần đoán, bạn sẽ nhận được thêm gợi ý là số lượng chữ số đúng và số lượng chữ số đúng vị trí.</br></br>
+                <span class="note">Lưu ý:</span> Các số có thể lặp lại.
+            </div>
+        </div>
+    </div> 
+    <script src="myscript.js"></script>
+</body>
+</html>
